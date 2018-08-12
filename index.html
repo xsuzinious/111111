@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mechanical Keyboard</title>
+    <!-- 웹 사이트 타이틀 (웹 브라우저 탭에 표시) -->
+    <meta charset="utf-8" />
+    <!-- 문자 세팅 (필수) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <!-- 모바일 뷰포트 사이즈 (필수) -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <!-- 스타일 시트 링크 -->
+    
+    
+<script src="ScrollTrigger.min.js"></script>
+
+
+   
+   
+    <script>
+   
+ 
+        
+         <!-- 앵커 스크롤링 제이쿼리 -->
+ jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){            
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
+        });
+     
+     
+      $(window).scroll( function(){
+        $('.fadeinleft').each( function(i){
+            
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            var top_of_window =  $(window).height(); - $(window).scrollTop()
+            
+            if( bottom_of_window > bottom_of_element/1.025 ){
+                $(this).animate({'opacity':'1','margin-bottom':'0px'},1000);
+            }
+            
+        
+        }); 
+    });
+     
+     
+     
+});
+        
+var ovf, slider;
+$(function(){
+ovf = this.getElementById("overflow");
+slider = this.getElementById("slider");
+winResize();
+$(window).bind({resize: winResize, scroll: winScroll});
+});
+function winResize(){
+ovf.style.top = slider.offsetHeight + "px";
+}
+
+function winScroll(){
+var op = 1 - (window.pageYOffset / slider.offsetHeight);
+slider.style.opacity = op;
+}
+    </script>
+
+    
+    
+</head>
+
+<body>
+    <div id="frame">
+            <div id="Switch">
+                   <div id="slide">
+	<input type="radio" name="pos" id="pos1" checked>
+	<input type="radio" name="pos" id="pos2">
+	<input type="radio" name="pos" id="pos3">
+	
+	<div class="trans">
+		<div class="f">
+        <div class="gif">
+		    <img src="images/KakaoTalk_20180812_181703705.png">
+		    </div>
+		</div>
+        
+		<div class="f">
+		    
+		     <div class="gif">
+		    <img src="images/KakaoTalk_20180812_181704183.png">
+		    </div>	    
+		</div>
+        
+		<div class="f">
+		     <div class="gif">
+		    <img src="images/KakaoTalk_20180812_181704739.png">
+		    </div>
+		</div>
+        
+        <div class="f">
+		     <div class="gif">
+		    <img src="images/KakaoTalk_20180812_181705241.png">
+		    </div>
+		</div>
+        
+        <div class="f">
+		     <div class="gif">
+		    <img src="images/KakaoTalk_20180812_181705755.png">
+		    </div>
+		</div>
+        
+        <div class="f">
+		     <div class="gif">
+		    <img src="images/KakaoTalk_20180812_181706481.png">
+		    </div>
+		</div>
+        
+        <div class="f">
+		     <div class="gif">
+		    <img src="images/KakaoTalk_20180812_181707044.png">
+		    </div>
+		</div>
+        
+        <div class="f">
+		     <div class="gif">
+		    <img src="images/KakaoTalk_20180812_181708251.png">
+		    </div>
+		</div>
+        
+        
+        
+        
+	</div>
+	<p class="pos">
+		<label for="pos1"></label>
+		<label for="pos2"></label>
+		<label for="pos3"></label>
+		
+	</p>
+</div>
+
+            </div>
+
+    </div>
+</body>
+
+</html>
